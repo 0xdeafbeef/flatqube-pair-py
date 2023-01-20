@@ -1,0 +1,15 @@
+[package]
+name = "flatqube-pair-py"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "flatqube_pair_py"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.18.0", features = ["extension-module", "anyhow"] }
+flatqube-pair = { git = "https://github.com/broxus/flatqube-pair.git" }
+hex = "0.4.3"
+anyhow = "1.0.68"
